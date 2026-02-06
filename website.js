@@ -206,4 +206,77 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // Initialize Tokenomics Chart
+    const tokenomicsCanvas = document.getElementById('tokenomicsChart');
+    if (tokenomicsCanvas) {
+        const ctx = tokenomicsCanvas.getContext('2d');
+
+        // Create gradient colors
+        const gradient1 = ctx.createLinearGradient(0, 0, 0, 400);
+        gradient1.addColorStop(0, '#7C3AED');
+        gradient1.addColorStop(1, '#6B46C1');
+
+        const gradient2 = ctx.createLinearGradient(0, 0, 0, 400);
+        gradient2.addColorStop(0, '#3B82F6');
+        gradient2.addColorStop(1, '#1E40AF');
+
+        const gradient3 = ctx.createLinearGradient(0, 0, 0, 400);
+        gradient3.addColorStop(0, '#60A5FA');
+        gradient3.addColorStop(1, '#3B82F6');
+
+        new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Public Sale / Community (85%)', 'Staking Rewards (5%)', 'Project Development (10%)'],
+                datasets: [{
+                    data: [85, 5, 10],
+                    backgroundColor: [gradient1, gradient2, gradient3],
+                    borderColor: ['#7C3AED', '#3B82F6', '#60A5FA'],
+                    borderWidth: 2,
+                    hoverOffset: 15
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            color: '#E5E7EB',
+                            font: {
+                                size: 14,
+                                family: 'Inter, sans-serif',
+                                weight: '500'
+                            },
+                            padding: 20,
+                            usePointStyle: true,
+                            pointStyle: 'circle'
+                        }
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgba(0, 0, 0, 0.9)',
+                        titleColor: '#FFFFFF',
+                        bodyColor: '#E5E7EB',
+                        borderColor: '#7C3AED',
+                        borderWidth: 1,
+                        padding: 12,
+                        displayColors: true,
+                        callbacks: {
+                            label: function (context) {
+                                return context.label + ': ' + context.parsed + '%';
+                            }
+                        }
+                    }
+                },
+                animation: {
+                    animateRotate: true,
+                    animateScale: true,
+                    duration: 1500,
+                    easing: 'easeInOutQuart'
+                }
+            }
+        });
+    }
 });

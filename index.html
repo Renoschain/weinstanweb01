@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="website.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 </head>
 
 <body>
@@ -36,6 +37,7 @@
                 <nav class="nav-links">
                     <a href="#features">Features</a>
                     <a href="#technology">Technology</a>
+                    <a href="#tokenomics">Tokenomics</a>
                     <a href="#partners">Partners</a>
                     <a href="https://t.me/weinstant" target="_blank" rel="noopener" class="btn-nav">Join Community</a>
                 </nav>
@@ -270,6 +272,85 @@
                         </div>
                         <a href="https://dexscreener.com" target="_blank" rel="noopener" class="partner-link">Visit
                             DexScreener →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tokenomics Section -->
+        <section id="tokenomics" class="tokenomics-section">
+            <div class="container">
+                <h2 class="section-title">$WEI Tokenomics</h2>
+                <p class="section-subtitle">Fair and transparent token distribution designed for long-term
+                    sustainability</p>
+
+                <div class="tokenomics-content">
+                    <div class="chart-container">
+                        <canvas id="tokenomicsChart"></canvas>
+                    </div>
+
+                    <div class="tokenomics-breakdown">
+                        <div class="breakdown-item">
+                            <div class="breakdown-header">
+                                <div class="breakdown-color" style="background: #7C3AED;"></div>
+                                <h3>85% Public Sale / Community</h3>
+                            </div>
+                            <p>The majority of tokens are allocated to the community through public sale, ensuring fair
+                                distribution and decentralization.</p>
+                        </div>
+
+                        <div class="breakdown-item">
+                            <div class="breakdown-header">
+                                <div class="breakdown-color" style="background: #3B82F6;"></div>
+                                <h3>5% Staking Rewards</h3>
+                            </div>
+                            <p>Reserved for rewarding long-term holders who stake their tokens, promoting ecosystem
+                                stability and engagement.</p>
+                        </div>
+
+                        <div class="breakdown-item">
+                            <div class="breakdown-header">
+                                <div class="breakdown-color" style="background: #60A5FA;"></div>
+                                <h3>10% Project Development</h3>
+                            </div>
+                            <p>Allocated for continuous development and growth of the Weinstant ecosystem:</p>
+                            <ul class="breakdown-details">
+                                <li><strong>3% Bot Development:</strong> Continuous improvement of trading algorithms,
+                                    new features, and technical infrastructure to maintain competitive advantage.</li>
+                                <li><strong>2% CEX Listings:</strong> Reserved for future centralized exchange listings,
+                                    market making, and liquidity provision to increase accessibility and trading volume.
+                                </li>
+                                <li><strong>5% Team Holdings:</strong> Vested allocation for the core development team
+                                    with a lock-up period to ensure long-term commitment and alignment with community
+                                    interests.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tokenomics-transparency">
+                    <h3>Transparency & Security</h3>
+                    <div class="transparency-grid">
+                        <div class="transparency-item">
+                            <h4>🔒 Team Vesting</h4>
+                            <p>The 5% team allocation is subject to a vesting schedule with lock-up periods, preventing
+                                immediate dumps and ensuring team commitment to long-term success.</p>
+                        </div>
+                        <div class="transparency-item">
+                            <h4>🚀 Development Focus</h4>
+                            <p>The 3% bot development fund ensures continuous innovation, allowing us to stay ahead of
+                                competitors and deliver cutting-edge features to our users.</p>
+                        </div>
+                        <div class="transparency-item">
+                            <h4>📈 CEX Strategy</h4>
+                            <p>The 2% CEX allocation is strategically reserved for tier-1 exchange listings, providing
+                                liquidity and accessibility while maintaining price stability.</p>
+                        </div>
+                        <div class="transparency-item">
+                            <h4>✅ Community First</h4>
+                            <p>With 85% allocated to the public, we prioritize community ownership and decentralization,
+                                ensuring no single entity can manipulate the market.</p>
+                        </div>
                     </div>
                 </div>
             </div>
